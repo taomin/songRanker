@@ -1,0 +1,17 @@
+<ul>
+	{{^data}}
+		<li>
+			<input class="song-query" type="text" value="" title="Enter Song/Artist Name" placeholder="Enter Song/Artist Name">
+		</li>
+	{{/data}}
+	{{#data}}
+		<li>
+		    <label>
+				<input class="song-picker" type="radio" name="songpick" data-href="{{tracks.href}}" data-album="{{tracks.album.name}}" data-track="{{tracks.name}}" data-artist="{{tracks.artists.name}}">
+				<span>{{tracks.name}},</span>
+				<span>by {{tracks.artists.name}},</span>
+				<span>in {{tracks.album.name}}</span>
+			</label>
+		</li>
+	{{/data}}
+</ul>

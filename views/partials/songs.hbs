@@ -1,0 +1,8 @@
+{{#songs}}
+   <li data-href="{{spotify_link}}">
+   		<p>{{name}} - by {{artist}}</p>
+   		<div>votes: <span class="vote-cnt">{{vote}}</span></div>
+   		<iframe class="spotify_widget" src="https://embed.spotify.com/?uri={{spotify_link}}" frameborder="0" allowtransparency="true"></iframe>
+   		<div><button class="like" {{#disabled}}disabled{{/disabled}}>Vote for this song</button></div>
+   </li>
+{{/songs}}

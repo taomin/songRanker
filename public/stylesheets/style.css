@@ -6,3 +6,20 @@ body {
 a {
   color: #00B7FF;
 }
+
+.ylogin {
+	float: right;
+}
+
+.userinfo {
+	float: right;
+}
+
+.song-query {
+    width: 200px;
+}
+
+.spotify_widget {
+	width: 300px;
+	height: 80px;
+}

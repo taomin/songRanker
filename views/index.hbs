@@ -1,11 +1,45 @@
 {{#contentFor "pageScripts"}}
  <!-- page scripts -->
+<script src="http://yui.yahooapis.com/3.8.1/build/yui/yui-min.js"></script>
+<script type="text/javascript" src="javascripts/songs.js"></script>
 {{/contentFor}}
 
 {{#contentFor "pageStyles"}}
  <!-- page styles -->
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
 {{/contentFor}}
 
-<p>It's index.hbs</p>
-{{title}}
+{{#contentFor "pageInlineJS"}}
+<script>
+var Partials = {{{partials}}};
+
+{{#user}}
+var User = {'email': '{{email}}', 'name': '{{name}}'};
+{{/user}}
+
+</script>
+{{/contentFor}}
+
+
+<p>{{title}}</p>
+
+{{#user}}
+<div class="userinfo">User name : {{name}}</div>
+{{/user}}
+
+{{^user}}
+<a href="/auth/yahoo" class="ylogin">Sign On with Yahoo</a>
+{{/user}}
+
+
+Songs:
+<ul class="songlist">
+  {{> songs}}
+</ul>
+
+<button class='add-song'>Add song!</button>
+
+<div class="new-songs">
+</div>
+
 
